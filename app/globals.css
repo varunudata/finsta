@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+/**********************      Auth pages     ***********************/
 
 .auth-page {
   min-height: 100vh;
@@ -22,12 +23,6 @@
   flex: 1;
   background-color: purple;
 }
-
-/* @media (min-width: 1024px) {
-  .auth-background {
-    display: block;
-  }
-} */
 
 .auth-card {
   background-color: #ffffff;
@@ -138,7 +133,7 @@
 }
 
 .auth-button:hover {
-  background-color: darkgreen;
+  background-color: rgb(81, 5, 81);
 }
 
 .auth-footer {
@@ -162,4 +157,191 @@
   font-size: 0.75rem;
   color: gray;
   margin-top: 0.25rem;
+}
+
+
+
+
+/**********************      Home page     ***********************/
+
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.main-navigation {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nav-link {
+  color: gray;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: purple;
+}
+
+.nav-button {
+  background-color: purple;
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  text-decoration: none;
+}
+
+.nav-button:hover {
+  background-color: rgb(103, 3, 103);
+}
+
+.hero-section {
+  /* background: linear-gradient(135deg, red 0%, rgb(213, 5, 5) 100%); */
+  background-color: purple;
+  color: white;
+  padding: 4rem 1.5rem;
+  text-align: center;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-title {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main-content {
+  flex: 1;
+  padding: 3rem 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.feature-section {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.feature-card {
+  padding: 1.5rem;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  border-radius: 0.5rem;
+  transition: transform 300ms, box-shadow 300ms;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.feature-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.feature-description {
+  color: gray;
+}
+
+.app-footer {
+  background-color: #1a202c;
+  color: white;
+  padding: 3rem 2rem 2rem;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid gray;
+}
+
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.footer-link {
+  color: gray;
+  text-decoration: none;
+  transition: color 300ms;
+}
+
+.footer-link:hover {
+  color: white;
+  cursor: pointer;
+}
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+  text-align: center;
+  color: gray;
+  font-size: 0.85rem;
 }
