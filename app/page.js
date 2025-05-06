@@ -1,3 +1,7 @@
+"use client"
+
+import { use, useState } from "react"
+
 export default function Home(){
   return(
     <div className="app-container">
@@ -21,9 +25,9 @@ export default function Home(){
             <h2 className="section-title">Loan Calculator</h2>
             <p className="section-subtitle">Get accurate monthly payment estimates for your loans</p>
           </div>
-            {/* <div className="calculator-wrapper">
+            <div className="calculator-wrapper">
               <Calculator />
-            </div> */}
+            </div>
         </section>
         <section className="feature-section">
           <div className="feature-card">
@@ -73,3 +77,68 @@ export default function Home(){
     </div>
   )
 }
+
+
+
+function Calculator(){
+
+  const[loantype, setLoantype] = useState("personal")
+  const[principal, setPrincipal] = useState(100000)
+  const[interestRate, setInterestRate] = useState(5)
+  const[loanTerm, setLoanTerm] = useState(36)
+
+
+  return(
+    <div className="calculator">
+      <div className="calculator-form">
+        <div className="form-row">
+          <div className="form-group">
+            <label htmlFor="loan-type" className="form-label">Loan Type</label>
+            <div className="select-wrapper">
+              <select id="loan-type" className="form-select" value={loantype} onChange={(e)=> setLoantype(e.target.value)}>
+                <option value="personal">Personal loan</option>
+                <option value="mortgage">Mortgage</option>
+                <option value="auto">Auto loan</option>
+              </select>
+            </div>
+          </div>
+          <div className="form-group">
+            <label htmlFor="principal" className="form-label">Loan Amount</label>
+            <div className="input-wrapper">
+              <span className="input-prefix">₹</span>
+              <input id="principal" type="number" value={principal} onChange={(e)=> setPrincipal(e.target.value)} className="form-input"/>
+            </div>
+          </div>
+        </div>
+        <div className="form-group">
+          <div className="slider-header">
+            <label htmlFor="interest-rate" className="form-label">Interest Rate</label>
+            <span className="slider-value">{interestRate}%</span>
+          </div>
+          <input id="interest-rate" className="form-range" type="range" min="0.1" max="20" step="0.1" value={interestRate} onChange={(e)=>setInterestRate(e.target.value)}/>
+          <div className="range-labels">
+            <span>0.1%</span>
+            <span>20%</span>
+          </div>
+        </div>
+        <div className="form-group">
+          <div className="slider-header">
+            <label htmlFor="loan-term" className="form-label">Loan Term</label>
+            <span className="slider-value">{loanTerm} months</span>
+          </div>
+          <input id="loan-term" type="range" min="12" max="360" step="12" value={loanTerm} onChange={(e) => setLoanTerm(e.target.value)} className="form-range"/>
+          <div className="range-labels">
+            <span>12 mo</span>
+            <span>360 mo</span>
+          </div>
+        </div>
+        <button className="calculate-button">
+          Calculate Payment
+        </button>
+      </div>
+    </div>
+  )
+}
+
+
+

@@ -76,7 +76,7 @@
 
 .form-input {
   width: 100%;
-  padding: 0.75rem;
+  padding: 0.75rem 0.75rem;
   border: 1px solid gray;
   border-radius: 0.25rem;
   font-size: 1rem;
@@ -344,4 +344,91 @@
   text-align: center;
   color: gray;
   font-size: 0.85rem;
+}
+
+
+/**********************      Calculator     ***********************/
+
+.calculator-wrapper {
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.calculator {
+  padding: 1.5rem;
+}
+
+.calculator-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid gray;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-prefix {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: gray;
+}
+
+.input-prefix~.form-input {
+  padding-left: 1.5rem;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.slider-value {
+  font-weight: 700;
+  color: purple;
+}
+
+.form-range {
+  width: 100%;
+  background-color: gray;
+  accent-color: purple;
+  cursor: pointer;
+}
+
+.range-labels {
+  display: flex;
+  justify-content: space-between;
+  color: gray;
+  opacity: 0.5;
+}
+
+.calculate-button {
+  background-color: purple;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1rem;
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 150ms;
+}
+
+.calculate-button:hover {
+  background-color: rgb(86, 5, 86);
 }
