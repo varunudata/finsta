@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+
 /**********************      Auth pages     ***********************/
 
 .auth-page {
@@ -141,6 +142,53 @@
   text-align: center;
   font-size: 1rem;
   color: gray;
+}
+
+.divider {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+.divider span {
+  background: white;
+  padding: 0 12px;
+  color: #888;
+  position: relative;
+  z-index: 1;
+}
+
+.google-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: white;
+  border: 1px solid #ddd;
+  color: #444;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-top: 16px;
+  width: 100%;
+}
+
+.google-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.divider::before {
+  content: "";
+  height: 1px;
+  background: #ccc;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 0;
 }
 
 .auth-link {

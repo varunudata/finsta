@@ -1,5 +1,6 @@
 "use client"
 
+import Link from "next/link"
 import { use, useState } from "react"
 
 export default function Home(){
@@ -11,6 +12,7 @@ export default function Home(){
           <a href="login" className="nav-link">Login</a>
           <a href="signup" className="nav-link">Sign Up</a>
           <a href="profile" className="nav-button">My Profile</a>
+          
         </div>
       </header>
       <div className="hero-section">
@@ -142,3 +144,18 @@ function Calculator(){
 
 
 
+// import { useSession, signIn, signOut } from "next-auth/react"
+
+// export default function Component() {
+//   const { data: session } = useSession()
+//   if(session) {
+//     return <>
+//       Signed in as {session.user.email} <br/>
+//       <button onClick={() => signOut()}>Sign out</button>
+//     </>
+//   }
+//   return <>
+//     Not signed in <br/>
+//     <button onClick={() => signIn()}>Sign in</button>
+//   </>
+// }
