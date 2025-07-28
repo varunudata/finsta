@@ -480,3 +480,46 @@
 .calculate-button:hover {
   background-color: rgb(86, 5, 86);
 }
+
+
+.results-container {
+  margin-top: 1.5rem;
+  background-color: #800080;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+
+.result-header {
+  margin-bottom: 1rem;
+}
+
+.result-header h3 {
+  font-size: large;
+  font-weight: 600;
+  color: white;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.result-item {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.result-label {
+  font-size: 1.25rem;
+  color: rgb(121, 41, 41);
+  margin-bottom: 1rem;
+}
+
+.result-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: purple;
+}
