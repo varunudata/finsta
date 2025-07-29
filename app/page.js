@@ -29,11 +29,6 @@ export default function Home() {
               </a>{" "}
             </>
           )}
-          {user && (
-            <a href="profile" className="nav-button">
-              My Profile
-            </a>
-          )}
         </div>
       </header>
       <div className="hero-section">
